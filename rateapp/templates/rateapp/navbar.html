@@ -16,7 +16,7 @@
 
 <body>
     <nav class="navbar navbar-fixed navbar-expand-lg navbar-light bg-white border border-whitesmoke border-bottom-1">
-        <a class="navbar-brand" href="{% url 'instagram-home'%}"><img src="../../static/images/instagram.png"
+        <a class="navbar-brand" href="{% url 'rateapp-home'%}"><img src="../../static/images/instagram.png"
                 alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,21 +31,29 @@
                             type="submit">
                     </form>
                 </li>
+                
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'instagram-home'%}"><span><i class="fas fa-home"></i></span></a>
+                    <a class="nav-link" href="{% url 'rateapp-home'%}"><span><i class="fas fa-home"></i></span></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">.RATEIT</span></a>
+                    <a class="nav-link" href="{% url 'rateapp-home' %}">.RATEIT</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">REGISTER/LOGIN</a>
+                    <a class="nav-link" href="{% url 'register'%}">REGISTER/LOGIN</a>
                 </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'register'%}">Profile</a>
+                </li>
+        
                 
             </ul>
             <button class="btn btn-info">SUBMIT YOUR SITE</button>
         </div>
     </nav>
+    {% block content %}
+    {% endblock %}
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
