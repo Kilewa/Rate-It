@@ -21,7 +21,7 @@ from django.urls import path,include
 from users import views as user_views
 
 urlpatterns = [
-    path('', include('rate.urls')),
+    path('', include('rateapp.urls')),
     path('register/', user_views.register, name='register'),
     # path('profile/', user_views.profile, name='profile'),
     # path('edit_profile/', user_views.edit_profile, name='edit_profile'),

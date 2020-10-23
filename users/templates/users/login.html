@@ -1,4 +1,4 @@
-{% extends "instagram/base.html" %}
+{% extends "rateapp/base.html" %}
 {% load bootstrap4 %}
 {% load static%}
 {% load crispy_forms_tags %}
@@ -14,17 +14,13 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6">
-            <div class="landing-page">
-                <img src="{% static 'img/instagram-0.png' %}" alt="">
-            </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
         </div>
-        <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="col-sm-4 col-md-4 col-lg-4">
             <div class="form-field">
                 <form method="POST">
                     {% csrf_token %}
                     <fieldset class="form-group">
-                        <img class="logo" src="{% static 'img/instagram.png' %}" alt="">
                         {{ form|crispy }}
                     </fieldset>
                     <div class="form-group">
@@ -37,6 +33,8 @@
                     </small>
                 </div>
             </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
         </div>
     </div>
 </div>

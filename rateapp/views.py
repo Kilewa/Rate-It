@@ -12,4 +12,4 @@ def home(request):
     # context = {
     #     'posts': posts,
     # }
-    return render(request, 'rateapp/home.html', context,)
+    return render(request, 'rateapp/home.html')
