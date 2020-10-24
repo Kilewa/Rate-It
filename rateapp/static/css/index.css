@@ -19,17 +19,15 @@
     font-weight: 700;
     text-transform: uppercase;
     font-size: 14px;
-    
 }
 
 .accounts:hover {
     text-decoration: none;
     color: #585555;
-
 }
 
 #projects {
-    right:  0;
+    right: 0;
     padding: 20px;
     top: 0;
     color: white;
@@ -38,4 +36,12 @@
 
 #projects:hover {
     background: #81D4FA;
+}
+
+.rates {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50, -50);
+    background: #FAFAFA;
 }

@@ -109,4 +109,4 @@ def projects(request,project_id):
         
     }
     
-    return render(request,'single_post.html',context) 
+    return render(request,'project_post.html',context) 
