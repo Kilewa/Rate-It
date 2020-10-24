@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'rateapp',
     'users',
     'crispy_forms',
+    'tinymce',
+    'url_or_relative_url_field',
     'bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
