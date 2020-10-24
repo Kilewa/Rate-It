@@ -26,23 +26,19 @@ class Profile(models.Model):
         self.save()
 
     @classmethod
-    def get_all_profiles(cls):
-        profiles = cls.objects.all()
-        return profiles
-
+    def get_by_id(cls,id):
+        profile = Profile.objects.get(user = id)
+        return profile
+    
     @classmethod
-    def get_profile_by_user_id(cls, userid):
-        '''
-        Returns profile based on user id
-        '''
-        profile = cls.objects.get(user=userid)
+    def filter_by_id(cls,id): 
+        profile = Profile.objects.filter(user = id).first()
         return profile
 
     @receiver(post_save, sender=User)
     def create_profile(sender, instance, created, **kwargs):
         if created:
             Profile.objects.create(user=instance)
-     
     @receiver(post_save, sender=User) 
     def save_profile(sender,instance,**kwargs):
         instance.profile.save()  
