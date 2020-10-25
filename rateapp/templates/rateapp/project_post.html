@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Awwards </title>
+    <title>Awwwards </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
@@ -22,7 +22,7 @@
 
 
 <body>
-    {% include 'navbar.html' %}
+    {% include 'rateapp/navbar.html' %}
     <div class="container">
             <div class="view overlay">
                     <img src="{{projects.image_landing.url}}" width='100%' height='450vh'>
@@ -89,10 +89,10 @@ aria-hidden="true">
 </div>
 
             {%else%}
-            <p class="alert alert-success">Thanks for your rating</p>
+            <p class="alert alert-success">Thanks for rating us!</p>
             {%endif %}
             {% else %}
-            <a href="/accounts/login/" class="btn btn-outline-info ">Log in to rate</a>
+            <a href="{% url 'login' %}" class="btn btn-outline-info ">Log in to rate</a>
             {% endif %}
     </div>
     <div class="card comments">
@@ -136,10 +136,10 @@ aria-hidden="true">
                 <!-- Call to action -->
                 <ul class="list-unstyled list-inline text-center py-2">
                     <li class="list-inline-item">
-                    <h5 class="mb-1">Awwards <i class="fas fa-trophy"></i>  <br> The awards of design, creativity and innovation on the internet</h5>
+                    <h5 class="mb-1">Awwwards <i class="fas fa-trophy"></i>  <br> The awards of design | creativity | innovation on the internet</h5>
                     </li>
                     <li class="list-inline-item">
-                    <a href="/accounts/register/" class="btn btn-outline-white btn-rounded">Sign up!</a>
+                    <a href="{%url 'register' %}" class="btn btn-outline-white btn-rounded">Sign up!</a>
                     </li>
                 </ul>
                 <!-- Call to action -->
