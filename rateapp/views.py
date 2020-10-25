@@ -117,7 +117,7 @@ def projects(request,project_id):
     
     return render(request,'project_post.html',context) 
 
-@login_required(login_url='/accounts/login/')
+@login_required
 def profile(request,username):
     profile = User.objects.get(username=username)
     
@@ -130,7 +130,7 @@ def profile(request,username):
     return render(request, 'users/profile.html',{"profile":profile,"profile_details":profile_details,"projects":projects}) 
 
 
-@login_required(login_url='/accounts/login/')
+@login_required
 def post_site(request):
     current_user = request.user
     if request.method == 'POST':
