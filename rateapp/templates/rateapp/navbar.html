@@ -37,11 +37,11 @@
             <a href="{% url 'login' %}" class="avatar">
                 <img class="rounded-circle" alt="" src="{{user.profile.profile_photo.url}}" height="60" width="60" />
             </a>
-            <a href="{% url 'register' %}" class="bg-info" id="projects">SUBMIT YOUR SITE!</a>
+            <a href="{% url 'post_site' %}" class="bg-info" id="projects">SUBMIT YOUR SITE!</a>
     
             {% else %}
             <a href="{% url 'login'%}" class="accounts">register/login</a>
-            <a href="{% url 'register' %}" class="bg-info" id="projects">SUBMIT YOUR SITE!</a>
+            <a href="{% url 'post_site' %}" class="bg-info" id="projects">SUBMIT YOUR SITE!</a>
         {%  endif %}
 
         </div>

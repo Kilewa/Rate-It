@@ -139,11 +139,11 @@ def post_site(request):
             home = form.save(commit=False)
             home.profile =current_user
             form.save()
-        return redirect('home')
+        return redirect('rateapp-home')
     else:
         form =ProjectUploadForm()
             
-    return render(request,'uploads.html',{"form":form,})
+    return render(request,'rateapp/uploads.html',{"form":form,})
 
 
 class ProfileList(APIView):
