@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'tinymce',
     'url_or_relative_url_field',
     'rest_framework',
+    'rest_framework.authtoken',
     'bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -136,3 +137,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'rateapp-home'
 LOGIN_URL = 'login'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
+
