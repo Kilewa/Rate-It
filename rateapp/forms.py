@@ -1,5 +1,5 @@
 from django import forms
-from .models import Profile,Projects,Rates
+from .models import Profile,Projects,Rates,Comments
 
 
 class ProjectUploadForm(forms.ModelForm):
@@ -19,7 +19,7 @@ class VotesForm(forms.ModelForm):
         fields = ('design','usability','content')
         
 
-# class ReviewForm(forms.ModelForm):
-#     class Meta:
-#         model = Comments
-#         fields = ('comments',)
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Comments
+        fields = ('comments',)

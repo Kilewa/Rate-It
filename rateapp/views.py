@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from .models import Profile,Projects,Rates,User
+from .models import Profile,Projects,Rates,User, Comments
 from .serializer import ProfileSerializer,ProjectsSerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 from .permissions import IsAdminOrReadOnly
-from .forms import ProfileEditForm,ProjectUploadForm,VotesForm
+from .forms import ProfileEditForm,ProjectUploadForm,VotesForm,ReviewForm
 
 
 
@@ -115,7 +115,7 @@ def projects(request,project_id):
         
     }
     
-    return render(request,'project_post.html',context) 
+    return render(request,'rateapp/project_post.html',context) 
 
 @login_required
 def profile(request,username):
