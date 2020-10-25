@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from .models import Profile,Projects,Rates
+from .models import Profile,Projects,Rates,User
 from .serializer import ProfileSerializer,ProjectsSerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -182,10 +182,10 @@ def search_results(request):
         
         message = f'{search_term}'
         
-        return render(request,'search.html',{"message":message,"projects":searched_projects})
+        return render(request,'rateapp/search.html',{"message":message,"projects":searched_projects})
     
     else:
         message = "You haven't searched for any term"
-        return render(request,'search.html',{"message":message,"projects":searched_projects})
+        return render(request,'rateapp/search.html',{"message":message,"projects":searched_projects})
     
 

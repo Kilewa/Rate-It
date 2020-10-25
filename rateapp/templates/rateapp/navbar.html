@@ -18,7 +18,7 @@
     <nav style="background-color:whitesmoke;" class="animated slideInDown navbar-collapse navbar-expand-lg sticky-top ">
     <div class="navbar mx-5">
         <div class="nav-search">
-        <form class="form-inline md-form form-md active-pink active-pink-2 mt-2" action="{% url 'login' %}">
+        <form class="form-inline md-form form-md active-pink active-pink-2 mt-2" action="{% url 'search_results' %}">
             <i class="fas fa-search" aria-hidden="true"></i>
             <input class="form-control form-control-md ml-3 w-75" type="text" placeholder="Search" aria-label="Search"
             name="titles">
@@ -34,7 +34,7 @@
         
             <a href="{% url 'logout' %}" class="accounts">Log Out</a>
         
-            <a href="{% url 'login' %}" class="avatar">
+            <a href="{% url 'profile' username=user %}" class="avatar">
                 <img class="rounded-circle" alt="" src="{{user.profile.profile_photo.url}}" height="60" width="60" />
             </a>
             <a href="{% url 'post_site' %}" class="bg-info" id="projects">SUBMIT YOUR SITE!</a>
