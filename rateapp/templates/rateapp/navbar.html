@@ -35,7 +35,7 @@
             <a href="/logout/" class="accounts">Log Out</a>
         
             <a href="{% url 'login' %}" class="avatar">
-                <img class="rounded-circle" alt="" src="" height="60" width="60" />
+                <img class="rounded-circle" alt="" src="{{user.profile.profile_photo.url}}" height="60" width="60" />
             </a>
             <a href="{% url 'register' %}" class="bg-info" id="projects">SUBMIT YOUR SITE!</a>
     
