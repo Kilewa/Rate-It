@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
     <title></title>
     {% block styles %}
     {% bootstrap_css %}
@@ -34,7 +34,7 @@
         
             <a href="{% url 'logout' %}" class="accounts">Log Out</a>
         
-            <a href="{% url 'profile' username=user %}" class="avatar">
+            <a href="{% url 'profile' username=user%}" class="avatar">
                 <img class="rounded-circle" alt="" src="{{user.profile.profile_photo.url}}" height="60" width="60" />
             </a>
             <a href="{% url 'post_site' %}" class="bg-info" id="projects">SUBMIT YOUR SITE!</a>

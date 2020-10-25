@@ -1,5 +1,6 @@
+
 {% load bootstrap4 %}
-{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +8,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Awwwards </title>
+<title>Awwwards - Website Awards </title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
@@ -17,8 +18,6 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
         crossorigin="anonymous">
-
-        <link rel="stylesheet" href="{% static 'css/index.css' %}">     
 </head>
 
 
@@ -27,15 +26,7 @@
 <div class="container">
         <div class="view overlay">
                 <img src="{{projects.image_landing.url}}" width='100%' height='450vh'>
-                <div class="rates">
-                        
-                </div>
                 
-                <div class="mask flex-center rgba-black-light">
-
-
-                        
-                </div>
         </div>
         <br>
         <div class="row">
@@ -51,15 +42,11 @@
                 <div class="col-md-3">
                         <h3>Average</h3> <hr class="bg-danger"> <br> <h4>{{average}}</h4>
                 </div>
-                
-                
-                
-                
         </div>
 
         {% if user.is_authenticated %}
         <button class="btn btn-outline-info" type="button" data-toggle="modal" data-target="#VotesForm">Rate</button>
-        <a href="{{projects.link}}" class="btn btn-pink btn-md pull-right " target="_blank">LIVE SITE <i
+        <a href="{{projects.link}}" class="btn btn-info btn-md pull-right " target="_blank">Visit Site <i
                 class="far fa-chevron-double-right"></i> </a>
         {% if user.id not in auth %}
         <br>
@@ -98,16 +85,16 @@ aria-hidden="true">
 </div>
 <div class="card comments">
         <div class="card-header">
-                <h4> Total Votes: {{all|length}} </h4>
+                <h4> Total Votes: {{all_ratings|length}} </h4>
         </div>
         <div class="list-group">
                 <ul class="list-group">
-                        {%if all%}
+                        {%if all_ratings %}
                         <table id='comm' class="table">
                                 <th>Voters</th>
                                 <th>Rating</th>
-                                {%for you in all%}<tr>
-                                        <td> <img src="{{you.user.profile.profile_photo.url}}" alt="" width='30px' height="30px">  {{you.user}}</td>
+                                {%for you in all_ratings %}<tr>
+                                        <td> <img src="{{you.user.profile.profile_photo.url}}" class="rounded-circle" alt="" width='30px' height="30px">  {{you.user}}</td>
                                         <td>
                                                 <div class="design">
                                                         <a href="" class="scores">{{you.design}}.0</a>

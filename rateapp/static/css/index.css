@@ -3,45 +3,7 @@ body{
     overflow-x: hidden;
 }
 
-#brand {
-    color: black;
-    padding: 10px;
-    border-bottom: none;
-    font-size: 18px;
-    font-weight: 900;
-}
 
-#brand:hover {
-    border: 2px solid #1565C0;
-    color: #64B5F6;
-    text-decoration: none;
-}
-
-.accounts {
-    padding: 10px;
-    letter-spacing: 1.5px;
-    color: black;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-.accounts:hover {
-    text-decoration: none;
-    color: #585555;
-}
-
-#projects {
-    right: 0;
-    padding: 20px;
-    top: 0;
-    color: white;
-    text-decoration: none;
-}
-
-#projects:hover {
-    background: #81D4FA;
-}
 
 .rates {
     top: 50%;
