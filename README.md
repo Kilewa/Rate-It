@@ -4,8 +4,9 @@ This project was generated using python version 3.8  and the Django framework. I
 ## SETUP INSTRUCTIONS:
 
 ### Installation
-1.Python 3+
-2.Django 3.1.2
+ 1.Python 3+
+
+ 2.Django 3.1.2
 
 ### Cloning the repository
 
