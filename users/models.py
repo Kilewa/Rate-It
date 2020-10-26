@@ -14,7 +14,8 @@ class Profile(models.Model):
     bio = HTMLField(max_length=300,default="No bio")
     profile_photo = models.ImageField(
         default='default.jpg', upload_to='profile_pics')
-    website = URLOrRelativeURLField(default='')     
+    website = URLOrRelativeURLField(default='')  
+    contact = models.CharField(max_length=50,default='example@domain.com')
 
     def __str__(self):
         return f'{self.user.username} Profile'

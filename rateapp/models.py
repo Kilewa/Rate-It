@@ -19,6 +19,7 @@ class Projects(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
     
     
+    
     @classmethod
     def search_by_projects(cls,search_term):
         projects = cls.objects.filter(title__icontains=search_term)
