@@ -37,13 +37,15 @@
 
   <body>
     {% include 'rateapp/navbar.html' %}
+
+    
     
     <div class="intro">
+      <h2 class="text">Upload your site and get it rated!</h2>
       <div class="box animated slideInDown">
-        <span class="border border-success text-white">DESIGN</span>&nbsp&nbsp&nbsp
-        <span class="border border-danger text-white ">USABILITY</span>&nbsp&nbsp&nbsp
-        <span class="border border-warning text-white ">CREATIVITY</span>&nbsp&nbsp&nbsp
-        <span class="border border-info text-white">CONTENT</span>
+        <span class="border border-success text-white design">DESIGN</span>&nbsp&nbsp&nbsp
+        <span class="border border-danger text-white usability">USABILITY</span>&nbsp&nbsp&nbsp
+        <span class="border border-info text-white content">CONTENT</span>
       </div>
     </div>
     {% block content %}{% endblock %}
