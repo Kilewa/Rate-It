@@ -9,7 +9,7 @@ class ProfileTestClass(TestCase):
                                 website='http://www.george.com', contact='g@mail.com')
 
     def test_instance(self):
-        self.assertTrue(isinstance(self.george, Profile))
+        self.assertTrue(isinstance(self.george,Profile))
     
     def test_save_method(self):
         self.george.save_profile()
