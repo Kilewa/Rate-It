@@ -15,8 +15,8 @@
 
 
                     <h4 class=" text-center"><strong>{{ profile.username }}</strong></h4>
-                    <p class=" text-center"><strong>{{ profile.bio }}</strong></p>
-                    <h4 class=" text-center"><strong>{{ profile.contact }}</strong></h4>
+                    <p class=" text-center"><strong>{{ Profile.bio }}</strong></p>
+                    <h4 class=" text-center"><strong>{{ Profile.contact }}</strong></h4>
                     
                 </div>
                 <div >
@@ -30,8 +30,6 @@
                     
                     {% endif %}
                     </ul>
-                    {% if profile.username == user.username or profile.bio == user.bio or profile.contact == user.contact  %}
-                    {% endif %}
                 </div>
             </div>
         </div>
@@ -40,7 +38,7 @@
             </li></div>
     </div>
     <hr>
-    <h3 style="text-align: center;">All Posts</h3>
+    <h3 class="text-center text-info">All Posts</h3>
     <div class="row user-images">
         {% for project in projects %}
         <div class="col-md-4">
