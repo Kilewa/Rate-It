@@ -4,7 +4,9 @@
 
 <div class="container top">
     <div class="row">
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            
+        </div>
         <div class="col-md-4">
             <div class="row top-section">
                 <div class="profile-image">
@@ -13,11 +15,14 @@
 
 
                     <h4 class=" text-center"><strong>{{ profile.username }}</strong></h4>
+                    <p class=" text-center"><strong>{{ profile.bio }}</strong></p>
+                    <h4 class=" text-center"><strong>{{ profile.contact }}</strong></h4>
+                    
                 </div>
                 <div >
 
-
-                    {% if profile.username == user.username %}
+                    <ul>
+                    {% if profile.username == user.username or profile.bio == user.bio or profile.contact == user.contact %}
                     <li class="list-inline-item">
 
                     </li>
@@ -25,9 +30,7 @@
                     
                     {% endif %}
                     </ul>
-                    {% if profile.username == user.username %}
-
-
+                    {% if profile.username == user.username or profile.bio == user.bio or profile.contact == user.contact  %}
                     {% endif %}
                 </div>
             </div>

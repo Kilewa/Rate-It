@@ -11,7 +11,7 @@ class ProjectUploadForm(forms.ModelForm):
 class ProfileEditForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ('profile_photo','bio','website') 
+        fields = ('profile_photo','bio','website','contact') 
         
 class VotesForm(forms.ModelForm):
     class Meta:

@@ -24,7 +24,6 @@ def projects(request,project_id):
     try:
         projects = Projects.objects.get(id=project_id)
         all_ratings = Rates.objects.filter(project=project_id) 
-        print(all_ratings)
     except Exception as e:
         raise Http404() 
     

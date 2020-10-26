@@ -23,13 +23,11 @@ class Projects(models.Model):
     @classmethod
     def search_by_projects(cls,search_term):
         projects = cls.objects.filter(title__icontains=search_term)
-        print(projects)
         return projects 
     
     @classmethod
     def get_profile_projects(cls,profile):
         projects = Projects.objects.filter(profile__pk=profile)
-        print(projects)
         return projects
     
     
